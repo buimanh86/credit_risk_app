@@ -1,45 +1,61 @@
 # credit_risk_app
 
-💳 Credit Risk Analysis & AI Assistant
+# 💳 Credit Risk Analysis & AI Assistant
 
-Ứng dụng web phân tích rủi ro tín dụng sử dụng Machine Learning và tích hợp AI chatbot để hỗ trợ giải thích kết quả.
+Ứng dụng web phân tích rủi ro tín dụng sử dụng Machine Learning kết hợp AI Chatbot để hỗ trợ giải thích kết quả mô hình một cách trực quan và dễ hiểu.
 
-📌 Tính năng chính
+---
 
-📊 Upload dữ liệu tín dụng
+## 🚀 Overview
 
-🔄 Tiền xử lý dữ liệu
+Project này cho phép:
 
-🤖 Huấn luyện và so sánh nhiều mô hình
+* Phân tích dữ liệu tín dụng
+* Huấn luyện và so sánh nhiều mô hình ML
+* Hiển thị các chỉ số đánh giá
+* Sử dụng AI để giải thích kết quả
 
-📈 Hiển thị các metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC, KS
+---
 
-🧠 AI Chatbot:
+## 📌 Features
 
-Giải thích kết quả mô hình
+* 📊 Upload dữ liệu tín dụng
+* 🔄 Data preprocessing
+* 🤖 Train & compare multiple models
+* 📈 Hiển thị metrics:
 
-So sánh các model
+  * Accuracy
+  * Precision
+  * Recall
+  * F1-score
+  * ROC-AUC
+  * KS
+* 🧠 AI Chatbot:
 
-Trả lời bằng tiếng Việt
+  * Phân tích kết quả mô hình
+  * So sánh các thuật toán
+  * Giải thích bằng tiếng Việt
 
-🛠️ Công nghệ sử dụng
+---
 
-Python
+## 🛠️ Tech Stack
 
-Streamlit
+* Python
+* Streamlit
+* Scikit-learn
+* Pandas, NumPy
+* Groq API (Llama 3 LLM)
 
-Scikit-learn
+---
 
-Pandas / NumPy
+## 📁 Project Structure
 
-Groq API (LLM - Llama 3)
-
-📁 Cấu trúc project
+```
 credit_risk_app/
 │
 ├── app.py
 ├── requirements.txt
-├── .env (không push lên GitHub)
+├── .env (not included in repo)
 │
 ├── app_pages/
 │   ├── chatbot.py
@@ -53,37 +69,95 @@ credit_risk_app/
 │   ├── metrics.py
 │   ├── model_utils.py
 │   └── preprocessing_utils.py
-⚙️ Cài đặt & chạy local
+```
 
-Clone repo:
+---
 
+## ⚙️ Installation & Run
+
+### 1. Clone repository
+
+```bash
 git clone https://github.com/buimanh86/credit_risk_app.git
 cd credit_risk_app
+```
 
-Tạo môi trường ảo:
+---
 
+### 2. Create virtual environment
+
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-Cài thư viện:
+---
 
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Tạo file .env:
+---
 
+### 4. Setup environment variables
+
+Tạo file `.env` trong thư mục gốc:
+
+```env
 GROQ_API_KEY=your_api_key_here
+```
 
-Chạy ứng dụng:
+---
 
+### 5. Run application
+
+```bash
 streamlit run app.py
-🔐 Lưu ý
+```
 
-Không commit file .env
+---
 
-Không hard-code API key trong code
+## 🔐 Security Note
 
-Sử dụng biến môi trường để bảo mật
+* Không commit file `.env`
+* Không hard-code API key trong source code
+* Sử dụng environment variables để bảo mật
 
-👨‍💻 Tác giả
+---
 
-GitHub: https://github.com/buimanh86
+## 🤖 AI Chatbot
+
+Chatbot sử dụng Groq API với model:
+
+```
+llama-3.3-70b-versatile
+```
+
+Chức năng:
+
+* Phân tích kết quả mô hình
+* So sánh hiệu suất giữa các model
+* Hỗ trợ giải thích dữ liệu tín dụng
+
+---
+
+## 📈 Future Improvements
+
+* Deploy lên Streamlit Cloud
+* Thêm nhiều model hơn
+* Tối ưu UI/UX
+* Lưu lịch sử phân tích
+
+---
+
+## 👨‍💻 Author
+
+* GitHub: https://github.com/buimanh86
+
+---
+
+## ⭐ Support
+
+Nếu bạn thấy project hữu ích, hãy ⭐ repo để ủng hộ!
