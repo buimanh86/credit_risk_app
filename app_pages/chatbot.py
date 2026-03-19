@@ -1,9 +1,12 @@
 import streamlit as st
 from groq import Groq
+import os
+from dotenv import load_dotenv
 
+load_dotenv(dotenv_path=".env")
 def run():
     client = Groq(
-        api_key="GROQ_API_KEY"
+        api_key=os.getenv("GROQ_API_KEY")
     )
 
     st.header("AI Credit Risk Assistant")
